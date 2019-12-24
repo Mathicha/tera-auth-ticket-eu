@@ -1,0 +1,11 @@
+{
+	"name": "tera-auth-ticket-eu",
+	"version": "1.0.0",
+	"main": "index.js",
+	"license": "MIT",
+	"private": true,
+	"author": "Mathi <mathi@mathi.moe>",
+	"dependencies": {
+		"request": "^2.88.0"
+	}
+}
