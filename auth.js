@@ -37,7 +37,7 @@ class Auth {
     this.getBearer({ email, password }, (err, bearer) => {
       if (err) return cb(err);
 
-      this.getAccounts({ bearer }, (err, accounts) => {
+      this.getAccounts({ bearer, email }, (err, accounts) => {
         if (err) return cb(err);
 
         if (!accounts.length) return cb(new Error('No TERA account on this Gameforge account.'));
