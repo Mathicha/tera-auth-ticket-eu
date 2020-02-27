@@ -15,7 +15,7 @@ auth.login('uwu@uwu.uwu', 'uwu', { accountId: 'xxxxxxxx', language: 'eu' }, (err
 
 ## API
 
-- `auth.logger`: default to `console`, A custom logger (ex: [pino](https://www.npmjs.com/package/pino), [bunyan](https://www.npmjs.com/package/bunyan), [log](https://github.com/pinkipi/log))
+- `auth.logger`: A custom logger (ex: [pino](https://www.npmjs.com/package/pino), [bunyan](https://www.npmjs.com/package/bunyan), [log](https://github.com/pinkipi/log))
 - `auth.logLevel`: default to `log`, Logger level
 
 ### login(email, password[,{ accountId, language }], cb)
