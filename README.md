@@ -7,15 +7,13 @@ Simulate logging onto a Gameforge TERA account to retrieve an auth ticket.
 ```js
 const auth = require('tera-auth-ticket-eu');
 
-auth.login('uwu@uwu.uwu', 'uwu', { accountId: 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx', language: 'eu' }, (err, serverInfo) => {
+auth.login('uwu@uwu.uwu', 'uwu', { accountId: 'xxxxxxxx', language: 'eu' }, (err, serverInfo) => {
   if (err) console.error(err);
   else console.log(serverInfo);
 });
 ```
 
 ## API
-
-## auth
 
 - `auth.logger`: default to `console`, A custom logger (ex: [pino](https://www.npmjs.com/package/pino), [bunyan](https://www.npmjs.com/package/bunyan), [log](https://github.com/pinkipi/log))
 - `auth.logLevel`: default to `log`, Logger level
