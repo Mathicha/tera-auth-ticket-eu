@@ -7,12 +7,26 @@ Simulate logging onto a Gameforge TERA account to retrieve an auth ticket.
 ```js
 const auth = require('tera-auth-ticket-eu');
 
-auth({ email: 'uwu@uwu.uwu', password: 'uwu' }, (err, serverInfo) => {
-	console.log(serverInfo);
+auth.login('uwu@uwu.uwu', 'uwu', { accountId: 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx', language: 'eu' }, (err, serverInfo) => {
+  if (err) console.error(err);
+  else console.log(serverInfo);
 });
 ```
 
-Optional args :
+## API
 
-- `accountId`: default to `null`
-- `language`: default to `'en'`, (supported languages : `'en'` `'de'` `'fr'`)
+## auth
+
+- `auth.logger`: default to `console`, A custom logger (ex: [pino](https://www.npmjs.com/package/pino), [bunyan](https://www.npmjs.com/package/bunyan), [log](https://github.com/pinkipi/log))
+- `auth.logLevel`: default to `log`, Logger level
+
+### login(email, password[,{ accountId, language }], cb)
+
+- `email`: Account email
+- `password`: Account password
+- `accountId`: default to `null`, TERA account ID (Use this option if your Gameforge account have multiples TERA accounts linked, if set to `null` the first account will be used)
+- `language`: default to `'en'` (Supported languages : `'en'` `'de'` `'fr'`)
+
+## Internal API
+
+### Im lazy to doc this thx bye
