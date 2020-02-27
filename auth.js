@@ -57,7 +57,7 @@ class Auth {
         this.getMAuthSession({ accountId, bearer }, (err, mauth_session) => {
           if (err) return cb(err);
 
-          this.getSID({ mauth_session, language }, (err, SID) => {
+          this.getSID({ mauth_session, language, accountId }, (err, SID) => {
             if (err) return cb(err);
 
             this.getServerInfo({ SID }, (err, serverInfo) => {
